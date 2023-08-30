@@ -1,0 +1,892 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+header .h_position .header_top {
+    position: relative;
+    padding: 10px 0px;
+    background-color: red;
+
+}
+
+header .h_position .header_top p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+header .h_position .header_top i {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(0,-50%);
+
+    font-size: 20px;
+    color: white;
+
+    cursor: pointer;
+
+}
+
+header .h_position .header_middle {
+    display: flex;
+    justify-content: center;
+}
+
+
+header .h_position .header_mid {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 0px;
+    width: 1600px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+header .h_position .header_mid .hm_left,
+header .h_position .header_mid .hm_right {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .h_position .header_mid .hm_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+header .h_position .header_mid .flex_need {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header .h_position .header_mid .hm_left .flex_need:hover,
+header .h_position .header_mid .hm_right .flex_need:hover {
+    opacity: 0.5;
+}
+
+header .h_position .header_btn {
+    display: flex;
+    justify-content: center;
+}
+
+header .h_position .header_bottom {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+
+    width: 1600px;
+
+}
+
+header .h_position .header_bottom .hbot_list {
+    display: flex;
+    gap: 40px;
+
+}
+
+header .h_position .header_bottom .hbot_list .grid_need .grid_detail {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    "place1 place2"
+    "place3 place3";
+}
+
+header .h_position .header_bottom .hbot_list .grid_need .grid_detail p {
+    grid-area: place1;
+
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+header .h_position .header_bottom .hbot_list .grid_need .grid_detail i {
+    grid-area: place2;
+    font-size: 12px;
+    margin-left: 6px;
+
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .grid_need .grid_detail .line {
+    grid-area: place3;
+
+    width: 0%;
+    height: 2px;
+
+    border-radius: 10px;
+    background-color: black;
+
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .hover_need:hover .grid_detail .line {
+    width: 100%;
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .hover_need:hover .i_hover_down {
+    transform: rotateX(-180deg);
+    transition: all 0.2s linear;
+}
+
+/* ------------------BEGIN Hover Menu Header----------------- */
+
+header .h_position .header_bottom .hbot_list .home {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more {
+    position: absolute;
+
+    display: flex;
+    visibility: hidden;
+
+    gap: 10px;
+    width: 1600px;
+
+    padding: 20px 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .home:hover .home_more {
+    visibility: visible;
+    transition: all 0.2s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail .before_hot span {
+    position: relative;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail .before_hot span::after {
+    position: absolute;
+    content: "Hot";
+    top: -6px;
+    right: -40px;
+    
+
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 25px;
+    background: #f8796e;
+    color: white;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail .before_new span {
+    position: relative;
+}
+
+header .h_position .header_bottom .hbot_list .home .home_more .hmore_detail .before_new span::after {
+    position: absolute;
+    content: "New";
+    top: -6px;
+    right: -45px;
+    
+
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 25px;
+    background: #9a84c8;
+    color: white;
+}
+
+/* -----------------------HOME DONE--------------------- */
+
+/* ------------------- SHOP --------------------- */
+header .h_position .header_bottom .hbot_list .shop {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+
+    gap: 10px;
+    width: 1500px;
+
+    padding: 20px 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .shop:hover .shop_more {
+    visibility: visible;
+    transition: all 0.2s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_text p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_text p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img img {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img .shop_more_des {
+    display: inline-block;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img .shop_more_des p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img .shop_more_des .shop_more_line {
+    position: relative;
+
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: all 0.3s linear;
+}
+
+
+header .h_position .header_bottom .hbot_list .shop .shop_more .shop_more_img .shop_more_des:hover .shop_more_line {
+    width: 100%;
+    background: black;
+}
+
+
+header .h_position .header_bottom .hbot_list .need_hide {
+    display: none ;
+}
+/* ------------------- SHOP DONE --------------------- */
+
+/* -----------------------PRODUCT------------------------ */
+header .h_position .header_bottom .hbot_list .shop {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+
+    gap: 10px;
+    width: 1410px;
+
+    padding: 20px 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .products:hover .products_more {
+    visibility: visible;
+    transition: all 0.2s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_text p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_text p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img {
+    width: 30%;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_top .ptop_left h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_top .ptop_right {
+    display: flex;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_top .ptop_right i {
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: white;
+
+    color: black;
+
+    transition: all 0.5s ease-in-out;
+
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_top .ptop_right i:hover {
+    background: black;
+    color: white;
+
+    transform: scale(1.1);
+
+    transition: all 0.5s ease-in-out;
+
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_bottom {
+    display: flex;
+    gap: 20px;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_bottom .img_both img {
+    width: 100%;
+}
+
+header .h_position .header_bottom .hbot_list .products .products_more .products_more_img .product_bottom .img_both h5 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* -------------------------DONE PRODUCTS-------------------- */
+header .h_position .header_bottom .hbot_list .pages {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .pages .pages_more {
+    position: absolute;
+    top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+
+    gap: 10px;
+    width: 280px;
+    padding: 20px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    opacity: 0;
+    transition: all 0.5s linear;
+
+}
+
+header .h_position .header_bottom .hbot_list .pages:hover .pages_more {
+    visibility: visible;
+
+    top: 25px;
+    transition: all 0.5s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .pages .pages_more p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .pages .pages_more p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+/* --------------DONE PAGES-------------- */
+header .h_position .header_bottom .hbot_list .blogs {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .blogs .blogs_more {
+    position: absolute;
+    top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+
+    gap: 10px;
+    width: 280px;
+    padding: 20px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    opacity: 0;
+    transition: all 0.5s linear;
+
+}
+
+header .h_position .header_bottom .hbot_list .blogs:hover .blogs_more {
+    visibility: visible;
+
+    top: 25px;
+    transition: all 0.5s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .blogs .blogs_more p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .blogs .blogs_more p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+/* -------------DONE BLOGS-------------- */
+header .h_position .header_bottom .hbot_list .foxkit {
+    position: relative;
+
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+
+    left: -400px;
+
+    gap: 10px;
+    width: 1500px;
+
+    padding: 20px 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit:hover .foxkit_more {
+    visibility: visible;
+    transition: all 0.2s linear;
+    opacity: 1;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_text p {
+    padding: 10px 100px 10px 0px;
+    color: gray;
+    transition: all 0.5s linear;
+    
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_text p:hover {
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img img {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img .foxkit_more_des {
+    display: inline-block;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img .foxkit_more_des p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img .foxkit_more_des .foxkit_more_line {
+    position: relative;
+
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: all 0.3s linear;
+}
+
+
+header .h_position .header_bottom .hbot_list .foxkit .foxkit_more .foxkit_more_img .foxkit_more_des:hover .foxkit_more_line {
+    width: 100%;
+    background: black;
+}
+
+
+header .h_position .header_bottom .hbot_list .need_hide {
+    display: none ;
+}
+
+
+/* ------------------END Hover Menu Header----------------- */
+
+
+header .h_position .header_bottom .hbot_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    cursor: pointer;
+}
+
+header .h_position .header_bottom .hbot_logo img {
+    width: 100%;
+    height: 35px;
+}
+
+
+header .h_position .header_bottom .hbot_icon {
+    display: flex;
+    gap: 20px;
+}
+
+header .h_position .header_bottom .hbot_icon i {
+    font-size: 20px;
+}
+
+/* --------------------END HEADER-------------------- */
+.news .news_container {
+    position: relative;
+
+    background: url(https://demo.minimog.co/cdn/shop/files/slide1_8fe9a986-6d4f-4b10-b40d-cdd474fc2d37.jpg?v=1689748475&width=3840);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+
+}
+
+.news .news_container .news_left {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+
+    width: 30%;
+}
+
+.news .news_container .news_left h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.news .news_container .news_left h1 {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-bottom: 40px;
+}
+
+.news .news_container .news_left button {
+    padding: 12px 40px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    transition: all 0.3s linear;
+}
+
+.news .news_container .news_left button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+
+    transition: all 0.3s linear;
+}
+
+.news .news_container .news_right {
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news .news_container .news_right .news_right_more {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.news .news_container .news_right .news_right_more h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.news .news_container .news_right .news_right_more .nrm_line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: black;
+
+}
+
+.news .news_container .news_right .news_right_more .nrm_line::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80%;
+    left: -60px;
+    top: 0;
+    background: white;
+
+    transition: all 1s ease-in-out;
+}
+
+.news .news_container .news_right .news_right_more:hover .nrm_line::before {
+    left: 100%;
+    transition: all 1s ease-in-out;
+}
+
+/* --------------DONE NEWS-------------- */
+
+/* -------------------CATEGORIES BEGIN------------------- */
+
+.caterogies .categories_container {
+    width: 1600px;
+    margin: 100px auto;
+}
+
+.caterogies .categories_container .cate_top {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+}
+
+.caterogies .categories_container .cate_top h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.caterogies .categories_container .cate_top .cate_top_right {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    top: 0;
+    right: 0;
+}
+
+.caterogies .categories_container .cate_top .cate_top_right .cate_hover {
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.caterogies .categories_container .cate_top .cate_top_right .cate_hover:hover {
+    transform: scale(1.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card {
+    position: relative;
+
+    width: 500px;
+    height: 600px;
+
+
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card:hover .card_img {
+    transform: scale(1.1);
+    transition: all 0.5s linear;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card:hover .card_description .card_des_right i {
+    padding: 15px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+
+    transition: all 0.2s linear;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card .card_img {
+    background: url(https://demo.minimog.co/cdn/shop/files/c1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s linear;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card_2 .card_img {
+    background: url(https://demo.minimog.co/cdn/shop/files/c2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card_3 .card_img {
+    background: url(https://demo.minimog.co/cdn/shop/files/c3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card .card_description .card_des_left {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card .card_description .card_des_right {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card .card_description .card_des_right i {
+    padding: 15px;
+    border-radius: 50%;
+    background: transparent;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.caterogies .categories_container .cate_bottom .cate_list .cate_card .card_description .card_des_right:hover i {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --------DONE CATEGORIES---------- */
+
+/* -----------BEGIN Best sellers----------- */
+
+.best_sellers .bs_container {
+    width: 1600px;
+    height: 90vh;
+
+    margin: 0px auto;
+}
+
+.best_sellers .bs_container .bs_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.best_sellers .bs_container .bs_header h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.best_sellers .bs_container .bs_header .dropdown_style {
+    background: transparent;
+    border: none;
+    color: black;
+
+    font-size: 40px;
+    font-weight: 400;
+
+}
+
+
+
+
+
